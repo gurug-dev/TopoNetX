@@ -1,7 +1,7 @@
 """Creation and manipulation of a combinatorial complex."""
 
 from collections.abc import Collection, Hashable, Iterable, Iterator
-from typing import Literal, Optional
+from typing import Literal
 
 import networkx as nx
 import numpy as np
@@ -835,7 +835,7 @@ class CombinatorialComplex(ColoredHyperGraph):
                     if self.degree(n) == 1:
                         yield cell
 
-    def remove_singletons(self, name: Optional[str] = None):
+    def remove_singletons(self, name: str | None):
         """Construct new CHG with singleton cells removed.
 
         Parameters
